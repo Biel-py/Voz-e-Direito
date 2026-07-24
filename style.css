@@ -554,22 +554,13 @@ footer{
 
 }
 
-/* ==========================================
-   1. CONFIGURAÇÕES GERAIS E VARIÁVEIS
-   ========================================== */
+/
    * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
   
-  body {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    background-color: #f4f6f9;
-    color: #1e293b;
-    line-height: 1.6;
-    padding: 2rem;
-  }
   
   main h1 {
     font-size: 2.2rem;
@@ -581,10 +572,7 @@ footer{
     color: #64748b;
     font-size: 1.1rem;
   }
-  
-  /* ==========================================
-     2. BOTÕES FIXOS (AÇÃO)
-     ========================================== */
+
   #btnVoltarTopo, #btnAbrirChat {
     position: fixed;
     bottom: 24px;
