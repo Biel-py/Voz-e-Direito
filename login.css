@@ -1,0 +1,161 @@
+/* Paleta de cores */
+:root{
+
+    --background:#0b0b0b;
+    --cor-secundaria:#1c0d0c;
+    --cor-terciaria:#351816;
+
+    --texto:#ffffff;
+    --cor-texto-suave:#bdbdbd;
+
+    --destaque:#d18c52;
+    --borda:#47201d;
+}
+
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Corpo */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--texto);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+/* Caixa de Login */
+.login{
+    width:100%;
+    max-width:420px;
+
+    background: var(--cor-secundaria);
+    border:2px solid var(--borda);
+    border-radius:18px;
+
+    padding:40px 35px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.45);
+    transition:.3s;
+}
+
+.login:hover{
+    background: var(--cor-terciaria);
+    transform:translateY(-5px);
+}
+
+/* Título */
+.login h2{
+    text-align:center;
+    font-size:2rem;
+    margin-bottom:30px;
+    color:var(--texto);
+    position:relative;
+}
+
+.login h2::after{
+    content:"";
+    width:70px;
+    height:4px;
+    background:var(--destaque);
+    display:block;
+    margin:12px auto 0;
+    border-radius:10px;
+}
+
+/* Campos */
+.campo{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:22px;
+}
+
+.campo label{
+    color:var(--cor-texto-suave);
+    margin-bottom:8px;
+    font-size:.95rem;
+}
+
+.campo input{
+    padding:14px;
+    border:2px solid var(--borda);
+    border-radius:10px;
+    background:var(--background);
+    color:var(--texto);
+    font-size:1rem;
+    transition:.3s;
+}
+
+.campo input::placeholder{
+    color:#888;
+}
+
+.campo input:focus{
+    outline:none;
+    border-color:var(--destaque);
+    box-shadow:0 0 10px rgba(209,140,82,.35);
+}
+
+/* Botão */
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+
+    background:var(--destaque);
+    color:var(--texto);
+
+    font-size:1rem;
+    font-weight:bold;
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+    background:#e8a56b;
+    transform:scale(1.03);
+}
+
+/* Cadastro */
+.cadastro{
+    text-align:center;
+    margin-top:25px;
+}
+
+.cadastro p{
+    color:var(--cor-texto-suave);
+}
+
+.cadastro a{
+    color:var(--destaque);
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.cadastro a:hover{
+    color:var(--texto);
+}
+
+/* Responsividade */
+@media(max-width:600px){
+
+    .login{
+        padding:30px 25px;
+    }
+
+    .login h2{
+        font-size:1.8rem;
+    }
+
+}
