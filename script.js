@@ -101,3 +101,4 @@ if (chatForm) {
       adicionarMensagem(resposta, 'bot');
     }, 400);
   });
+  }
