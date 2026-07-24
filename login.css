@@ -19,7 +19,6 @@
     box-sizing:border-box;
 }
 
-/* Corpo */
 body{
     font-family: Arial, Helvetica, sans-serif;
     background: var(--background);
@@ -32,7 +31,6 @@ body{
     padding:20px;
 }
 
-/* Caixa de Login */
 .login{
     width:100%;
     max-width:420px;
@@ -71,7 +69,6 @@ body{
     border-radius:10px;
 }
 
-/* Campos */
 .campo{
     display:flex;
     flex-direction:column;
@@ -147,7 +144,6 @@ button:hover{
     color:var(--texto);
 }
 
-/* Responsividade */
 @media(max-width:600px){
 
     .login{
