@@ -52,8 +52,42 @@ header nav a:hover {
 /*CARDS E MINISTÉRIOS*/
 
 .card, .ministerio {
-    background-color: var(--cor-destaque);
+    background-color: var(--cor-secundaria);
     border-radius: 8px;
     padding: 1rem;
     color: var(--cor-texto);
+}
+
+/*CARROSSEL DE PERSONALIDADES*/
+
+.carrossel{
+  background-color: var(--cor-secundaria);
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+  display: flex;
+}
+
+.card{
+  background-color: var(--cor-secundaria);
+  flex: 0 0 500px;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--texto);
+  transition: transform 0.2s;
+}
+
+.card:hover{
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
 }
