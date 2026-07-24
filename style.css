@@ -60,8 +60,8 @@ header{
 
 .imagem {
     max-width: 100%;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     display: block;
 }
 
@@ -184,10 +184,6 @@ nav a:hover::after{
 
 }
 
-/*==========================
-            MAIN
-===========================*/
-
 main{
 
     width:min(1200px,95%);
@@ -202,10 +198,6 @@ main{
     gap:80px;
 
 }
-
-/*==========================
-         TÍTULOS
-===========================*/
 
 section h2{
 
@@ -354,8 +346,11 @@ section p{
 
 #justica img{
 
-    width:100%;
-
+    max-width: 100%;
+    width: 500px;
+    height: auto;
+    display: block;
+    
 }
 
 .links-poderes{
