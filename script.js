@@ -1,3 +1,4 @@
+console.log("JS carregado");
 const btnVoltarTopo = document.getElementById("btnVoltarTopo");
 const modalChat = document.getElementById("modalChat");
 const btnAbrirChat = document.getElementById("btnAbrirChat");
