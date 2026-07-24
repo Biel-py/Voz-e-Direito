@@ -1,0 +1,59 @@
+/* ===========================
+   VOZ E DIREITO
+   Inspirado no Politize
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* VARIÁVEIS DE CORES E BASE */
+:root{ 
+
+    --background:#000000; /*FUNDO 60%*/
+    --cor-secundaria:#280F0D; /*CARDS, DIVISÕES E ABAS 30%*/
+    --texto:#FFFFFF; /*TEXTO 10%*/
+    --cor-texto-suave:#CCCCCC;/*PARA VARIAÇÃO DE COR DE TEXTO*/
+
+}
+
+/*MARGENS PADRÃO ZERADA*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  background-color: var(--background);
+  color: var(--cor-secundaria);
+  font-family: Arial, sans-serif ;
+  line-height: 1.6;
+}
+
+header{
+  background-color: var(--cor-secundaria);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 2px solid #3a1613;
+}
+
+header nav a {
+  color: var(--cor-texto);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/*CARDS E MINISTÉRIOS*/
+
+.card, .ministerio {
+    background-color: var(--cor-destaque);
+    border-radius: 8px;
+    padding: 1rem;
+    color: var(--cor-texto);
+}
