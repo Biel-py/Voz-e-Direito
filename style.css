@@ -554,25 +554,6 @@ footer{
 
 }
 
-/
-   * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  
-  main h1 {
-    font-size: 2.2rem;
-    color: #0f172a;
-    margin-bottom: 0.5rem;
-  }
-  
-  main p {
-    color: #64748b;
-    font-size: 1.1rem;
-  }
-
   #btnVoltarTopo, #btnAbrirChat {
     position: fixed;
     bottom: 24px;
