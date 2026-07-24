@@ -568,15 +568,14 @@ footer{
     width: 48px;
     height: 48px;
     background-color: var (--cor-terciaria:#351816);
-    color: #ffffff;
+    color: #351816;
     font-size: 18px;
   }
   
   #btnAbrirChat {
     right: 84px;
     padding: 12px 24px;
-    background: linear-gradient(135deg, #47201d, #2563eb);
-    color: #ffffff;
+    color: #351816;
     font-size: 15px;
     display: flex;
     align-items: center;
