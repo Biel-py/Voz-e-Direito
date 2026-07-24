@@ -56,9 +56,14 @@ header{
 
 }
 
-/*==========================
-            LOGO
-===========================*/
+/* Logo */
+
+.imagem {
+    max-width: 100%;
+    width: 100px;
+    height: 100px;
+    display: block;
+}
 
 .logo h1{
 
