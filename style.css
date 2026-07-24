@@ -628,3 +628,14 @@ footer{
     background: #6BCADF;
     transform: scale(1.1);
 }
+.botao_home{
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.botao_home.mostrar{
+    opacity: 1;
+    visibility: visible;
+}
+
