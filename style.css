@@ -604,38 +604,3 @@ footer{
     }
 
 }
-
-.botao_home{
-    position: fixed;
-    right: 25px;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    border: none;
-    background: #477BFF;
-    color: white;
-    font-size: 1.2rem;
-    cursor: pointer;
-    z-index: 999;
-    transition: 0.3s;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.25);
-}
-
-.botao_home{
-    bottom: 95px;
-}
-.botao_home:hover{
-    background: #6BCADF;
-    transform: scale(1.1);
-}
-.botao_home{
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.4s;
-}
-
-.botao_home.mostrar{
-    opacity: 1;
-    visibility: visible;
-}
-
