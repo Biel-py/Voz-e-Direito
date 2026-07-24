@@ -560,13 +560,14 @@ footer{
     font-weight: 600;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: var (--cor-terciaria:#351816);
   }
   
   #btnVoltarTopo {
     right: 24px;
     width: 48px;
     height: 48px;
-    background-color: #47201d;
+    background-color: var (--cor-terciaria:#351816);
     color: #ffffff;
     font-size: 18px;
   }
@@ -585,6 +586,7 @@ footer{
   #btnVoltarTopo:hover, #btnAbrirChat:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    
   }
   
 
