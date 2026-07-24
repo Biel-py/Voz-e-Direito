@@ -561,7 +561,7 @@ footer{
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     background-color: #FFFFFF;
-    color:#FFFFFF;
+    color:#000000;
   }
   
   #btnVoltarTopo {
@@ -569,14 +569,14 @@ footer{
     width: 48px;
     height: 48px;
     background-color:#FFFFFF;
-    color: #FFFFFF;
+    color: #000000;
     font-size: 18px;
   }
   
   #btnAbrirChat {
     right: 84px;
     padding: 12px 24px;
-    color: #FFFFFF;
+    color: #000000;
     background-color:#FFFFFF;
     font-size: 15px;
     display: flex;
