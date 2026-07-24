@@ -560,15 +560,15 @@ footer{
     font-weight: 600;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    background-color: var(--cor-terciaria:#351816);
-    color: var(--cor-terciaria:#351816);
+    background-color: var (--cor-terciaria:#351816);
+    color: var (--cor-terciaria:#351816);
   }
   
   #btnVoltarTopo {
     right: 24px;
     width: 48px;
     height: 48px;
-    background-color: var(--cor-terciaria:#351816);
+    background-color: var (--cor-terciaria:#351816);
     color: #351816;
     font-size: 18px;
   }
@@ -577,7 +577,7 @@ footer{
     right: 84px;
     padding: 12px 24px;
     color: #351816;
-    background-color: var(--cor-terciaria:#351816);
+    background-color: var (--cor-terciaria:#351816);
     font-size: 15px;
     display: flex;
     align-items: center;
