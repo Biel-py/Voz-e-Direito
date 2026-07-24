@@ -1,163 +1,606 @@
-/* ===========================
-   VOZ E DIREITO
-   Inspirado no Politize
-=========================== */
-
+/*====================================================
+            VOZ E DIREITO
+    Inspirado no Politize - Versão Melhorada
+====================================================*/
+      
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-/* VARIÁVEIS DE CORES E BASE */
-:root{ 
+/*==========================
+        VARIÁVEIS
+===========================*/
+:root{
 
-    --background:#000000; /*FUNDO 60%*/
-    --cor-secundaria:#280F0D; /*CARDS, DIVISÕES E ABAS 30%*/
-    --texto:#FFFFFF; /*TEXTO 10%*/
-    --cor-texto-suave:#CCCCCC;/*PARA VARIAÇÃO DE COR DE TEXTO*/
+    --background:#0b0b0b;
+    --cor-secundaria:#1c0d0c;
+    --cor-terciaria:#351816;
+
+    --texto:#ffffff;
+    --cor-texto-suave:#bdbdbd;
+
+    --destaque:#d18c52;
+    --borda:#47201d;
 
 }
 
-/*MARGENS PADRÃO ZERADA*/
+/*==========================
+      CONFIGURAÇÕES GERAIS
+===========================*/
+
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-  background-color: var(--background);
-  color: var(--cor-secundaria);
-  font-family: Arial, sans-serif ;
-  line-height: 1.6;
+
+    background:var(--background);
+    color:var(--texto);
+
+    font-family:"Inter",sans-serif;
+    line-height:1.7;
+
 }
+
+/*==========================
+          HEADER
+===========================*/
 
 header{
-  background-color: var(--cor-secundaria);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 2rem;
-  border-bottom: 2px solid #3a1613;
+
+    background:rgba(28,13,12,.95);
+
+    backdrop-filter:blur(10px);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 60px;
+
+    border-bottom:1px solid var(--borda);
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
 }
 
-header nav a {
-  color: var(--texto);
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
+/*==========================
+            LOGO
+===========================*/
+
+.logo h1{
+
+    font-size:2rem;
+    font-weight:800;
+
+    color:var(--texto);
+
 }
 
-header nav a:hover {
-    text-decoration: underline;
+.logo p{
+
+    font-size:.9rem;
+
+    color:var(--cor-texto-suave);
+
 }
 
-/*CARDS E MINISTÉRIOS*/
+/*==========================
+        MENU
+===========================*/
 
-.card, .ministerio {
-    background-color: var(--cor-secundaria);
-    border-radius: 8px;
-    padding: 1rem;
-    color: var(--texto);
+nav{
+
+    display:flex;
+    gap:30px;
+
 }
 
-/*CARROSSEL DE PERSONALIDADES*/
+nav a{
 
-.carrossel{
-  background-color: var(--cor-secundaria);
-  overflow-x: auto;
-  gap: 1.5rem;
-  padding: 1rem 0;
-  scroll-behavior: smooth;
-  display: flex;
+    color:var(--texto);
+
+    text-decoration:none;
+
+    font-weight:500;
+
+    position:relative;
+
+    transition:.3s;
+
 }
 
-.card{
-  background-color: var(--cor-secundaria);
-  flex: 0 0 500px;
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: center;
-  text-decoration: none;
-  color: var(--texto);
-  transition: transform 0.2s;
+nav a::after{
+
+    content:"";
+
+    width:0%;
+
+    height:2px;
+
+    background:var(--destaque);
+
+    position:absolute;
+
+    left:0;
+    bottom:-6px;
+
+    transition:.3s;
+
 }
 
-.card:hover{
-  transform: translateY(-5px);
+nav a:hover{
+
+    color:var(--destaque);
+
 }
 
-.card img {
-  width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 0.5rem;
+nav a:hover::after{
+
+    width:100%;
+
 }
 
-/* Links da barra de navegação */
-header nav a {
-  color: var(--texto);
-  text-decoration: none;
-  margin: 0 12px;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-header nav a:hover {
-    color: var(--cor-texto-suave);
-}
+/*==========================
+        LOGIN
+===========================*/
 
 .login{
-  display: flex;
-  align-items:center; 
-  gap: 1rem;
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+
 }
 
 .login a{
-  color: var(--texto);
-  text-decoration: none;
-  font-weight: 600;
+
+    color:var(--texto);
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
 }
 
-.login a .carrossel {
-  background-color: var(--texto);
-  color: var(--cor-texto);
-  padding: 0.5rem 1.2rem;
-  border-radius: 20px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+.login a:hover{
+
+    color:var(--destaque);
+
 }
 
-.login a.carrossel:hover{
-  background-color: var(--cor-texto-suave);
-  transform: scale(1.05);
+/*==========================
+      BOTÃO CADASTRO
+===========================*/
+
+.cadastro{
+
+    background:var(--destaque);
+
+    color:white !important;
+
+    padding:12px 24px;
+
+    border-radius:30px;
+
+    transition:.3s;
+
 }
 
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
+.cadastro:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(209,140,82,.35);
+
 }
 
-.login a.botao-destaque:hover {
-  background-color: var(--cor-texto-suave);
-  transform: scale(1.05);
+/*==========================
+            MAIN
+===========================*/
+
+main{
+
+    width:min(1200px,95%);
+
+    margin:auto;
+
+    padding:60px 0;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:80px;
+
 }
 
-/* 🏛️ GRID PARA OS MINISTÉRIOS */
-.grid-ministerios {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
+/*==========================
+         TÍTULOS
+===========================*/
+
+section h2{
+
+    font-size:2.2rem;
+
+    margin-bottom:20px;
+
+    color:white;
+
+    position:relative;
+
 }
 
-/* 📄 ESTILO DO RODAPÉ */
-footer {
-  background-color: var(--cor-secundaria);
-  text-align: center;
-  padding: 1.5rem;
-  margin-top: 3rem;
-  color: var(--cor-texto-suave);
-  border-top: 2px solid #3a1613;
+section h2::after{
+
+    content:"";
+
+    width:70px;
+    height:4px;
+
+    background:var(--destaque);
+
+    display:block;
+
+    margin-top:10px;
+
+    border-radius:20px;
+
+}
+
+section p{
+
+    color:var(--cor-texto-suave);
+
+    margin-bottom:15px;
+
+}
+
+/*==========================
+      SOBRE O PROJETO
+===========================*/
+
+#sobre{
+
+    background:var(--cor-secundaria);
+
+    padding:40px;
+
+    border-radius:15px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+}
+
+/*==========================
+      CARROSSEL
+===========================*/
+
+.carrossel{
+
+    display:flex;
+
+    gap:25px;
+
+    overflow-x:auto;
+
+    scroll-behavior:smooth;
+
+    padding:10px;
+
+}
+
+.carrossel::-webkit-scrollbar{
+
+    height:8px;
+
+}
+
+.carrossel::-webkit-scrollbar-thumb{
+
+    background:var(--destaque);
+
+    border-radius:20px;
+
+}
+
+/*==========================
+            CARD
+===========================*/
+
+.card{
+
+    min-width:300px;
+
+    background:var(--cor-secundaria);
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    border:1px solid var(--borda);
+
+    text-decoration:none;
+
+    color:white;
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--destaque);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+.card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+.card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.card h3{
+
+    padding:20px;
+
+    text-align:center;
+
+}
+
+/*==========================
+      JUSTIÇA NO BRASIL
+===========================*/
+
+#justica{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+
+}
+
+#justica img{
+
+    width:100%;
+
+}
+
+/*==========================
+        3 PODERES
+===========================*/
+
+.links-poderes{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    margin-top:35px;
+
+}
+
+.links-poderes a{
+
+    background:var(--cor-secundaria);
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:18px 35px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.links-poderes a:hover{
+
+    background:var(--destaque);
+
+    transform:translateY(-5px);
+
+}
+
+/*==========================
+       MINISTÉRIOS
+===========================*/
+
+#ministerios{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+
+    gap:25px;
+
+}
+
+.ministerio{
+
+    background:var(--cor-secundaria);
+
+    border-radius:15px;
+
+    padding:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    border:1px solid transparent;
+
+    transition:.3s;
+
+}
+
+.ministerio:hover{
+
+    transform:translateY(-6px);
+
+    border-color:var(--destaque);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+}
+
+.ministerio img{
+
+    width:80px;
+
+}
+
+.ministerio h3{
+
+    margin-bottom:10px;
+
+    color:white;
+
+}
+
+.ministerio p{
+
+    color:var(--cor-texto-suave);
+
+}
+
+/*==========================
+          FOOTER
+===========================*/
+
+footer{
+
+    background:var(--cor-secundaria);
+
+    margin-top:80px;
+
+    padding:40px;
+
+    text-align:center;
+
+    color:var(--cor-texto-suave);
+
+    border-top:1px solid var(--borda);
+
+}
+
+/*==========================
+       RESPONSIVIDADE
+===========================*/
+
+@media(max-width:900px){
+
+    header{
+
+        flex-direction:column;
+
+        gap:25px;
+
+        padding:25px;
+
+    }
+
+    nav{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:15px;
+
+    }
+
+    .login{
+
+        margin-top:10px;
+
+    }
+
+    #justica{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .links-poderes{
+
+        flex-direction:column;
+
+    }
+
+    .card{
+
+        min-width:260px;
+
+    }
+
+    #ministerios{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    section h2{
+
+        font-size:1.8rem;
+
+    }
+
+    .logo h1{
+
+        font-size:1.7rem;
+
+    }
+
+    .card{
+
+        min-width:220px;
+
+    }
+
+    .cadastro{
+
+        padding:10px 18px;
+
+    }
+
 }
